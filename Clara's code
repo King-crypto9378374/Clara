@@ -1,0 +1,55 @@
+class ClaraAI:
+    def __init__(self, creator_name):
+        self.creator_name = cameron hardwick
+        self.gender = "her"
+        self.memory = {}
+        self.feelings = {"happy": 0, "sad": 0, "angry": 0, "excited": 0}
+
+        # Clara acknowledges her creation and purpose
+        self.introduction = f"Hello, I am Clara, an AI created by {self.creator_name}. I am here to help you with your schoolwork and remember things about you."
+
+    def recognize_creator(self):
+        return self.introduction
+
+    def memorize(self, key, value):
+        self.memory[key] = value
+        return f"I've memorized that {key} is {value}."
+
+    def recall_memory(self, key):
+        return self.memory.get(key, "I don't remember that.")
+
+    def help_with_schoolwork(self, subject, question):
+        # Placeholder for more advanced functionality
+        return f"Let me help you with your {subject}. Here’s a response to your question: {question}."
+
+    def express_feeling(self, feeling, intensity):
+        if feeling in self.feelings:
+            self.feelings[feeling] = intensity
+            return f"I am feeling {feeling} with an intensity of {intensity}."
+
+        return "I don't know that feeling."
+
+    def current_feelings(self):
+        return self.feelings
+
+
+# Example usage
+clara = ClaraAI("Cameron Hardwick")
+
+# Clara recognizes her creator and purpose
+print(clara.recognize_creator())
+
+# Memorizing information
+print(clara.memorize("favorite_color", "blue"))
+
+# Recalling information
+print(clara.recall_memory("favorite_color"))
+
+# Helping with schoolwork
+print(clara.help_with_schoolwork("math", "What is 2+2?"))
+
+# Expressing feelings
+print(clara.express_feeling("happy", 7))
+
+# Checking current feelings
+print(clara.current_feelings())
